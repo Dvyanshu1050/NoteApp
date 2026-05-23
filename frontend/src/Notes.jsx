@@ -25,7 +25,7 @@ const Notes = () => {
         try {
 
             const res = await axios.get(
-                "http://localhost:3000/all-notes"
+                "https://noteapp-3qd1.onrender.com/all-notes"
             )
 
             setNotes(res.data)
@@ -57,7 +57,7 @@ const Notes = () => {
         try {
 
             await axios.post(
-                "http://localhost:3000/add-notes",
+                "https://noteapp-3qd1.onrender.com/add-notes",
                 {
                     title,
                     desc
@@ -84,7 +84,7 @@ const Notes = () => {
         try {
 
             await axios.delete(
-                `http://localhost:3000/delete-note/${id}`
+                `https://noteapp-3qd1.onrender.com/delete-note/${id}`
             )
 
             getNotes()
@@ -117,7 +117,7 @@ const Notes = () => {
         try {
 
             await axios.put(
-                `http://localhost:3000/edit-note/${editId}`,
+                `https://noteapp-3qd1.onrender.com/edit-note/${editId}`,
                 {
                     title,
                     desc
